@@ -1,5 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv"
+import { response } from "express";
 //se realiza llamo dpara que lea las variables de entorno
 dotenv.config();
 
@@ -13,6 +14,8 @@ constructor( ){
   this.apiUrl = process.env.API_ACCESS_URL ?? '';
 }
 /*
+  const [count, setCount] = useState(0)
+
 & currencies = EUR,GBP,CAD,PLN
 & source = USD
 & format = 1 
@@ -51,7 +54,10 @@ return
 async convertBadge (to: string, from: string, amount: number){
   const fee = await this.getConvert([to], [from]);
   const convertFee = fee[`${from}${to}`];
-  return amount * convertFee;
+  const resultConvert = amount * convertFee;
+  return resultConvert;
+ // response.json({ resultConvert}) 
+
 }
 
 }

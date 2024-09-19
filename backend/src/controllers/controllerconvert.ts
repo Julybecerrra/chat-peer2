@@ -18,9 +18,9 @@ if (!amount || !from || !to) {
 }
 try {
   //llamado del servicio para su respectiva conversion 
-  const result = await convertServe.convertBadge(to.toString(), from.toString(), Number(amount));
+  const resultado = await convertServe.convertBadge(to.toString(), from.toString(), Number(amount));
   //obtenemos el  resultado de la conversion
-  res.status(200).json({ to, from, amount, result})
+  res.status(200).json({ result: to, from, amount, resultado})
 } catch (error) {
   //en caso de erroro generar mensaje con su respectivo error
   res.status(500).json({ error: (error as Error).message})
