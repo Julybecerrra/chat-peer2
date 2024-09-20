@@ -1,0 +1,55 @@
+
+.columns{
+display: flex;
+width: 100%;
+}
+.containerSearch{
+  height: 90vh;
+  padding: 8px;
+  text-align: -webkit-right;
+  width: 70%;
+  border-radius: 10px;
+
+  background-color: hsl(220, 14%, 21%);
+  color: #ffffff;
+
+
+}
+.envio{
+background: none;
+}
+.envio img{
+width: 29px;
+}
+.data{
+  display: flex;
+  border:solid 1px#ffffff;
+  border-radius: 25px;
+  padding: 4px;
+  top: 84%;
+  position: relative;
+}
+select option {
+  background-color: #6b8afd;
+}
+.iconsInput{
+  width: 20px;
+  margin: 0 4px;
+}
+.contenInput{
+  background: none;
+  border: none;
+  outline: none; /* Elimina el borde cuando se hace clic */
+}
+.resultSearch{
+  background: #6b8afd;
+  width: 300px;
+}
+input[type='number']{
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.containertable{
+  width: 30%;
+}
