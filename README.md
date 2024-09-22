@@ -56,4 +56,9 @@ Como usuario, quiero poder ver.
 - El sistema debe almacenar el historial de conversiones realizadas por el usuario.
 - El usuario debe poder ver una lista de conversiones anteriores y detalles como cantidad, y monedas involucradas.
 
+## Diagramas
+
+![casos de uso, diagrama de clase](./frontend/src/img/diagrama.png)
+
+
 ## Visitar Sitio Web
