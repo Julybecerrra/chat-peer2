@@ -1,0 +1,22 @@
+.columna{
+  display: flex;
+  margin-top: 50px;
+}
+.contenido{
+  margin: auto;
+  padding: 18px;
+}
+.title{
+  font-family: "Roboto", sans-serif;
+margin-top: 23px;
+margin-bottom: 8px;
+}
+.parrafoo{
+  font-weight: bold;
+}
+@media (max-width: 576px) {
+  .columna {
+      display: block;
+  }
+ 
+}

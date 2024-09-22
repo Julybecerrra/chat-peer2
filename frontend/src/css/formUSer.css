@@ -1,0 +1,16 @@
+
+.containerForm{
+  border: 1px solid#ccc;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: -webkit-center;
+}
+.space{
+  margin: 20px;
+  width: 300px;
+
+}
+nav.navbar.navbar-expand-lg {
+  justify-content: space-between;
+}
+
