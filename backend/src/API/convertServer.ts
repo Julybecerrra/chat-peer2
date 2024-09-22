@@ -53,8 +53,11 @@ return
 */
 async convertBadge (to: string, from: string, amount: number){
   const fee = await this.getConvert([to], [from]);
+  console.log(fee)
   const convertFee = fee[`${from}${to}`];
+  console.log(fee[`${from}${to}`])
   const resultConvert = amount * convertFee;
+  console.log(resultConvert)
   return resultConvert;
  // response.json({ resultConvert}) 
 
