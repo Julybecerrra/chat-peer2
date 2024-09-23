@@ -9,20 +9,21 @@ const Login = () => {
   const uriBack = import.meta.env.VITE_URL_BACK;
 
   const [password_user, setPassword] = useState('')
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState('')
-  const navigate = useNavigate()
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
   const {login} = useAuth();
 
-  const LoginUser = async(e) => {
+  const LoginUser = async (e) => {
     e.preventDefault();
     try {
       const responseUri = await axios.post(`${uriBack}/login?password_user=${password_user}&email=${email}`);
       const token = responseUri.data.token;
       console.log(token)
       localStorage.setItem('token',token)
-      login(token)
-      navigate('/convert')
+      login(token);
+ 
+   
 
     } catch (error) {
       if (!password_user || email) {

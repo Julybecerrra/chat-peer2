@@ -1,7 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { jwtDecode } from 'jwt-decode';
 import { getUserId } from "../user/apiUserId";
-getUserId;
+import {useNavigate} from "react-router-dom";
+
+;
 
 const AuthContext = createContext();
 
@@ -19,6 +21,7 @@ return context
 export const AuthProvider = ({children}) => {
   
   const [userId, setUserId] = useState(null)
+  const [isLoagin, setIsLoagin] = useState(true)
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -27,6 +30,7 @@ export const AuthProvider = ({children}) => {
       setUserId(decodedToken.UserId);
       
     }
+    setIsLoagin(false)
   }, [])
 
   const login = (token) => {
@@ -46,16 +50,14 @@ export const AuthProvider = ({children}) => {
 
   };
 
-
   const logout = () => {
     setUserId(null)
     localStorage.removeItem('token')
   
   };
 
-
   return(
-    <AuthContext.Provider value={{userId, login, logout}}>
+    <AuthContext.Provider value={{userId, isLoagin, login, logout}}>
       {children}
       </AuthContext.Provider>
   );

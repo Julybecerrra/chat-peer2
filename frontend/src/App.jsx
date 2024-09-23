@@ -15,11 +15,13 @@ function App() {
   <Navbar />
   <Routes>
   <Route path="/" element={ <Home />} />
-  <Route path="/convert"  element={ <Convert/>} >
-  <Route path=""  element={ <PrivateRoute/>} />
+  {/*<Route path="/convert"  element={ <PrivateRoute/>} >
+  <Route index element={ <Convert/>} />
 
     
     </Route>
+    */}
+     <Route path="/convert" element={ <Convert />} />
     <Route path="/login" element={ <Login />} />
     <Route path="/register" element={ <Register />} />
    
